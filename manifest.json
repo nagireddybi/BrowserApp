@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Report",
+  "version": "1.0",
+  "description": "Opens Gmail, navigates to Spam folder, and reports an email as spam.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "identity",
+    "storage"
+  ],
+   "host_permissions": [
+        "https://sendcrux.com/*"
+    ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

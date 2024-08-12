@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Gmail Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s;
+            max-width: 120px;
+        }
+
+        button#startPauseButton {
+            background: #28a745;
+        }
+
+        button#startPauseButton:hover {
+            background: #218838;
+        }
+
+        button#goButton {
+            background: #007bff;
+        }
+
+        button#goButton:hover {
+            background: #0056b3;
+        }
+
+        i.fas {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gmail Report</h1>
+    <div class="container">
+        <div class="button-group">
+            <button id="startPauseButton"><i class="fas fa-play"></i> Start</button>
+            <button id="goButton"><i class="fas fa-arrow-right"></i> Go</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
